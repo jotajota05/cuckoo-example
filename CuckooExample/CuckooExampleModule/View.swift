@@ -11,6 +11,7 @@ import UIKit
 class View: UIViewController {
 
 	@IBOutlet var photoImageView: UIImageView!
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,7 +32,7 @@ class View: UIViewController {
 	@IBAction func didChangeSepiaSwitchValue(_ sender: Any) {
 	}
 	
-	@IBAction func didChangeOtherSwitchValue(_ sender: Any) {
+	@IBAction func didChangeInvertSwitchValue(_ sender: Any) {
 	}
 }
 
