@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31B99CF4217676220052D3B2 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 31B99CF3217676220052D3B2 /* Cartfile */; };
+		31B99CF821768AAC0052D3B2 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99CF721768AAC0052D3B2 /* Module.swift */; };
+		31B99CFA21768B000052D3B2 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99CF921768B000052D3B2 /* Presenter.swift */; };
+		31B99CFD21768B510052D3B2 /* ApiBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99CFC21768B510052D3B2 /* ApiBroker.swift */; };
+		31B99CFF21768BFE0052D3B2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99CFE21768BFE0052D3B2 /* Models.swift */; };
 		714788392174CA4100F1280C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714788382174CA4100F1280C /* AppDelegate.swift */; };
-		7147883B2174CA4100F1280C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7147883A2174CA4100F1280C /* ViewController.swift */; };
+		7147883B2174CA4100F1280C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7147883A2174CA4100F1280C /* View.swift */; };
 		7147883E2174CA4100F1280C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7147883C2174CA4100F1280C /* Main.storyboard */; };
 		714788402174CA4300F1280C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7147883F2174CA4300F1280C /* Assets.xcassets */; };
 		714788432174CA4300F1280C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714788412174CA4300F1280C /* LaunchScreen.storyboard */; };
@@ -26,9 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31B99CF3217676220052D3B2 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		31B99CF721768AAC0052D3B2 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		31B99CF921768B000052D3B2 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		31B99CFC21768B510052D3B2 /* ApiBroker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBroker.swift; sourceTree = "<group>"; };
+		31B99CFE21768BFE0052D3B2 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		714788352174CA4100F1280C /* CuckooExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuckooExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714788382174CA4100F1280C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7147883A2174CA4100F1280C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7147883A2174CA4100F1280C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7147883D2174CA4100F1280C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7147883F2174CA4300F1280C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		714788422174CA4300F1280C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,9 +66,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31B99CFB21768B0A0052D3B2 /* CuckooExampleModule */ = {
+			isa = PBXGroup;
+			children = (
+				31B99CF721768AAC0052D3B2 /* Module.swift */,
+				7147883A2174CA4100F1280C /* View.swift */,
+				31B99CF921768B000052D3B2 /* Presenter.swift */,
+				31B99CFC21768B510052D3B2 /* ApiBroker.swift */,
+				31B99CFE21768BFE0052D3B2 /* Models.swift */,
+			);
+			path = CuckooExampleModule;
+			sourceTree = "<group>";
+		};
 		7147882C2174CA4100F1280C = {
 			isa = PBXGroup;
 			children = (
+				31B99CF3217676220052D3B2 /* Cartfile */,
 				714788372174CA4100F1280C /* CuckooExample */,
 				7147884C2174CA4300F1280C /* CuckooExampleTests */,
 				714788362174CA4100F1280C /* Products */,
@@ -78,11 +101,11 @@
 			isa = PBXGroup;
 			children = (
 				714788382174CA4100F1280C /* AppDelegate.swift */,
-				7147883A2174CA4100F1280C /* ViewController.swift */,
 				7147883C2174CA4100F1280C /* Main.storyboard */,
 				7147883F2174CA4300F1280C /* Assets.xcassets */,
 				714788412174CA4300F1280C /* LaunchScreen.storyboard */,
 				714788442174CA4300F1280C /* Info.plist */,
+				31B99CFB21768B0A0052D3B2 /* CuckooExampleModule */,
 			);
 			path = CuckooExample;
 			sourceTree = "<group>";
@@ -106,6 +129,8 @@
 				714788312174CA4100F1280C /* Sources */,
 				714788322174CA4100F1280C /* Frameworks */,
 				714788332174CA4100F1280C /* Resources */,
+				31B99CF6217682350052D3B2 /* ShellScript */,
+				31B99CF5217676CE0052D3B2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -179,6 +204,7 @@
 			files = (
 				714788432174CA4300F1280C /* LaunchScreen.storyboard in Resources */,
 				714788402174CA4300F1280C /* Assets.xcassets in Resources */,
+				31B99CF4217676220052D3B2 /* Cartfile in Resources */,
 				7147883E2174CA4100F1280C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,13 +218,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31B99CF5217676CE0052D3B2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file. Change \"$PROJECT_DIR/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"$PROJECT_DIR/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = $INPUT_DIR\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"Carthage/Checkouts/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/FileName1.swift\" \\\n\"$INPUT_DIR/FileName2.swift\" \\\n\"$INPUT_DIR/FileName3.swift\"\n# ... and so forth, the last line should never end with a backslash\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+		};
+		31B99CF6217682350052D3B2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Cuckoo.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		714788312174CA4100F1280C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7147883B2174CA4100F1280C /* ViewController.swift in Sources */,
+				7147883B2174CA4100F1280C /* View.swift in Sources */,
 				714788392174CA4100F1280C /* AppDelegate.swift in Sources */,
+				31B99CF821768AAC0052D3B2 /* Module.swift in Sources */,
+				31B99CFF21768BFE0052D3B2 /* Models.swift in Sources */,
+				31B99CFD21768B510052D3B2 /* ApiBroker.swift in Sources */,
+				31B99CFA21768B000052D3B2 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
