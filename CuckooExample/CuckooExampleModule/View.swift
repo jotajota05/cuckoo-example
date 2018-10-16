@@ -10,11 +10,28 @@ import UIKit
 
 class View: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet var photoImageView: UIImageView!
+	override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+	@IBAction func didTapChangePhotoButton(_ sender: Any) {
+	}
+	
+	@IBAction func didTapSaveButton(_ sender: Any) {
+	}
+	
+	@IBAction func didTapResetButton(_ sender: Any) {
+	}
+	
+	@IBAction func didChangeBlackAndWhiteSwitchValue(_ sender: Any) {
+	}
+	
+	@IBAction func didChangeSepiaSwitchValue(_ sender: Any) {
+	}
+	
+	@IBAction func didChangeOtherSwitchValue(_ sender: Any) {
+	}
 }
 
