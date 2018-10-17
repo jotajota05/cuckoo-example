@@ -155,7 +155,6 @@
 				714788312174CA4100F1280C /* Sources */,
 				714788322174CA4100F1280C /* Frameworks */,
 				714788332174CA4100F1280C /* Resources */,
-				31B99CF6217682350052D3B2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -245,24 +244,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		31B99CF6217682350052D3B2 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Cuckoo.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		31B99D032176E5BB0052D3B2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
