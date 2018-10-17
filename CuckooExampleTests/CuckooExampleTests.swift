@@ -8,27 +8,36 @@
 
 import XCTest
 @testable import CuckooExample
+import Cuckoo
 
 class CuckooExampleTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+	func testChangePicture() {
+		let presenter = Presenter()
+		presenter.userInterface = MockUserInterface()
+		presenter.broker = MockBroker()
+		
+		guard let mockBroker = presenter.broker as? MockBroker,
+			let mockUserInterface = presenter.userInterface as? MockUserInterface else { XCTFail(); return }
+		
+		var fetchImageCallWasMade = false
+		var userInterfaceWasUpdated = false
+		
+		stub(mockBroker) { stub in
+			when(stub.fetchImage(completion: any())).then { _ in
+				fetchImageCallWasMade = true
+			}
+		}
+		
+		stub(mockUserInterface) { stub in
+			when(stub.update(image: any())).then { _ in
+				userInterfaceWasUpdated = true
+			}
+		}
+		
+		presenter.changeImage()
+		
+		XCTAssertTrue(fetchImageCallWasMade && userInterfaceWasUpdated)
+	}
 
 }
