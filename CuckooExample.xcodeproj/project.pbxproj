@@ -12,6 +12,7 @@
 		31B99CFA21768B000052D3B2 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99CF921768B000052D3B2 /* Presenter.swift */; };
 		31B99CFD21768B510052D3B2 /* ApiBroker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99CFC21768B510052D3B2 /* ApiBroker.swift */; };
 		31B99CFF21768BFE0052D3B2 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99CFE21768BFE0052D3B2 /* Models.swift */; };
+		31B99D022176CD5B0052D3B2 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99D012176CD5B0052D3B2 /* ImageUtils.swift */; };
 		714788392174CA4100F1280C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714788382174CA4100F1280C /* AppDelegate.swift */; };
 		7147883B2174CA4100F1280C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7147883A2174CA4100F1280C /* View.swift */; };
 		7147883E2174CA4100F1280C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7147883C2174CA4100F1280C /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		31B99CF921768B000052D3B2 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		31B99CFC21768B510052D3B2 /* ApiBroker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBroker.swift; sourceTree = "<group>"; };
 		31B99CFE21768BFE0052D3B2 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		31B99D012176CD5B0052D3B2 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		714788352174CA4100F1280C /* CuckooExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuckooExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714788382174CA4100F1280C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7147883A2174CA4100F1280C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 			path = CuckooExampleModule;
 			sourceTree = "<group>";
 		};
+		31B99D002176CD0F0052D3B2 /* ImageManagement */ = {
+			isa = PBXGroup;
+			children = (
+				31B99D012176CD5B0052D3B2 /* ImageUtils.swift */,
+			);
+			path = ImageManagement;
+			sourceTree = "<group>";
+		};
 		7147882C2174CA4100F1280C = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 				714788412174CA4300F1280C /* LaunchScreen.storyboard */,
 				714788442174CA4300F1280C /* Info.plist */,
 				31B99CFB21768B0A0052D3B2 /* CuckooExampleModule */,
+				31B99D002176CD0F0052D3B2 /* ImageManagement */,
 			);
 			path = CuckooExample;
 			sourceTree = "<group>";
@@ -267,6 +278,7 @@
 				31B99CFF21768BFE0052D3B2 /* Models.swift in Sources */,
 				31B99CFD21768B510052D3B2 /* ApiBroker.swift in Sources */,
 				31B99CFA21768B000052D3B2 /* Presenter.swift in Sources */,
+				31B99D022176CD5B0052D3B2 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

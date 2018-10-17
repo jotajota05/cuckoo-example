@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import UIKit
+
+protocol UserInterface {
+	func update(image: UIImage)
+	func setActive(filter: FilterType)
+}
+
+protocol EventHandler {
+	func activate(filter: FilterType)
+	func changeImage()
+	func reset()
+	func save()
+}
+
+protocol Broker {
+	func fetchImage(completion: (UIImage?) -> Void)
+	func save(image: UIImage, success: (() -> Void)?, failure: ((Error) -> Void)?)
+}
