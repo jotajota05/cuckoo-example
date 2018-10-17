@@ -142,7 +142,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="blackAndWhiteSwitch" destination="zEd-eP-dVu" id="WUb-Z2-eV3"/>
+                        <outlet property="invertSwitch" destination="1bG-yD-EYx" id="6Aj-nL-lYV"/>
                         <outlet property="photoImageView" destination="52F-OU-D3I" id="DnJ-nc-D2N"/>
+                        <outlet property="sepiaSwitch" destination="yOX-99-nXw" id="4Pj-ni-YQC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

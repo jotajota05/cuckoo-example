@@ -7,3 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
+class ImageBroker: Broker {
+	
+	private var imageNumber = 0
+	
+	func fetchImage(completion: (UIImage?) -> Void) {
+		completion(UIImage(named: "city\(imageNumber % 6)"))
+		imageNumber += 1
+	}
+	
+	func save(image: UIImage, success: (() -> Void)?, failure: ((Error) -> Void)?) {
+		success?()
+	}
+}

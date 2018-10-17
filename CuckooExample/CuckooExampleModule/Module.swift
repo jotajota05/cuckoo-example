@@ -9,12 +9,31 @@
 import Foundation
 import UIKit
 
-protocol UserInterface {
-	func update(image: UIImage)
-	func setActive(filter: FilterType)
+class Router {
+	
+	public static let shared: Router = Router()
+	
+	private let presenter = Presenter()
+		
+	private init() {}
+	
+	func viewDidLoad(with view: UserInterface) {
+		self.presenter.userInterface = view
+		self.presenter.broker = ImageBroker()
+		self.presenter.imageEditor = ImageEditor()
+		view.eventHandler = self.presenter
+	}
 }
 
-protocol EventHandler {
+protocol UserInterface: class {
+	var eventHandler: EventHandler? { get set }
+	
+	func update(image: UIImage?)
+	func setActive(filter: FilterType)
+	func resetFilters()
+}
+
+protocol EventHandler: class {
 	func activate(filter: FilterType)
 	func changeImage()
 	func reset()
