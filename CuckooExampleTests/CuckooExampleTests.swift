@@ -12,33 +12,11 @@ import Cuckoo
 
 class CuckooExampleTests: XCTestCase {
 
-    func testActivateFilter() {
-        let presenter = Presenter()
-
-        presenter.userInterface = MockUserInterface()
-        presenter.imageEditor = MockImageEditor()
-
-        guard let mockEditor = presenter.imageEditor as? MockImageEditor,
-            let mockUserInterface = presenter.userInterface as? MockUserInterface else { XCTFail(); return }
-
-        var filterWasApplied = false
-        var userInterfaceWasUpdated = false
-
-        let testImage = UIImage(named: "city1")
-
-        stub(mockEditor) { stub in
-
-        }
-
-        stub(mockUserInterface) { stub in
-
-        }
-    }
-
 	func testChangePicture() {
-		let presenter = Presenter() // Class to test
+		
+		// Given
+		let presenter = Presenter()
 
-        // Dependencies
         presenter.userInterface = MockUserInterface()
 		presenter.broker = MockBroker()
 		
@@ -50,6 +28,7 @@ class CuckooExampleTests: XCTestCase {
 
         let testImage = UIImage(named: "city1")
 		
+		// When
 		stub(mockBroker) { stub in
 			when(stub.fetchImage(completion: any())).then { result in
                 result(testImage)
@@ -65,6 +44,7 @@ class CuckooExampleTests: XCTestCase {
 		
 		presenter.changeImage()
 		
+		// Then
 		XCTAssertTrue(fetchImageCallWasMade && userInterfaceWasUpdated)
 	}
 

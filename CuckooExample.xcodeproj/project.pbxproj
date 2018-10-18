@@ -15,6 +15,7 @@
 		31B99D022176CD5B0052D3B2 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99D012176CD5B0052D3B2 /* ImageUtils.swift */; };
 		31B99D052176E7F20052D3B2 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B99D042176E7F20052D3B2 /* GeneratedMocks.swift */; };
 		31B99D0A2176F0890052D3B2 /* Cuckoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B99D092176F0890052D3B2 /* Cuckoo.framework */; };
+		31DE1568217823A500842930 /* ImageFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DE1567217823A500842930 /* ImageFilterTests.swift */; };
 		714788392174CA4100F1280C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714788382174CA4100F1280C /* AppDelegate.swift */; };
 		7147883B2174CA4100F1280C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7147883A2174CA4100F1280C /* View.swift */; };
 		7147883E2174CA4100F1280C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7147883C2174CA4100F1280C /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		31B99D012176CD5B0052D3B2 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
 		31B99D042176E7F20052D3B2 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		31B99D092176F0890052D3B2 /* Cuckoo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cuckoo.framework; path = Carthage/Build/iOS/Cuckoo.framework; sourceTree = "<group>"; };
+		31DE1567217823A500842930 /* ImageFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterTests.swift; sourceTree = "<group>"; };
 		714788352174CA4100F1280C /* CuckooExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuckooExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714788382174CA4100F1280C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7147883A2174CA4100F1280C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				31B99D042176E7F20052D3B2 /* GeneratedMocks.swift */,
 				7147884D2174CA4300F1280C /* CuckooExampleTests.swift */,
 				7147884F2174CA4300F1280C /* Info.plist */,
+				31DE1567217823A500842930 /* ImageFilterTests.swift */,
 			);
 			path = CuckooExampleTests;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7147884E2174CA4300F1280C /* CuckooExampleTests.swift in Sources */,
+				31DE1568217823A500842930 /* ImageFilterTests.swift in Sources */,
 				31B99D052176E7F20052D3B2 /* GeneratedMocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
