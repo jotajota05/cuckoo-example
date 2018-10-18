@@ -10,11 +10,11 @@ import Foundation
 import CoreImage
 import UIKit
 
-protocol ImageUtil {
+protocol ImageUtils {
 	func apply(filter: FilterType, input: CGImage, completion: @escaping (UIImage?) -> Void)
 }
 
-class ImageEditor: ImageUtil {
+class ImageEditor: ImageUtils {
 	func apply(filter: FilterType, input: CGImage, completion: @escaping (UIImage?) -> Void) {
 
 		let coreInputImage = CIImage(cgImage: input)
