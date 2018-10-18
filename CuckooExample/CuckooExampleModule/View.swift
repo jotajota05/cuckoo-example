@@ -23,6 +23,9 @@ class View: UIViewController {
 		Router.shared.viewDidLoad(with: self)
 		self.eventHandler?.changeImage()
     }
+}
+
+extension View {
 
 	@IBAction func didTapChangePhotoButton(_ sender: Any) {
 		self.eventHandler?.changeImage()

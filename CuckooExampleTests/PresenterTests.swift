@@ -10,7 +10,7 @@ import XCTest
 @testable import CuckooExample
 import Cuckoo
 
-class CuckooExampleTests: XCTestCase {
+class PresenterTests: XCTestCase {
 
 	func testChangePicture() {
 		
@@ -30,15 +30,16 @@ class CuckooExampleTests: XCTestCase {
 		
 		// When
 		stub(mockBroker) { stub in
-			when(stub.fetchImage(completion: any())).then { result in
-                result(testImage)
+			when(stub.fetchImage(completion: any())).then { completion in
+                completion(testImage)
 				fetchImageCallWasMade = true
+                verify(mockUserInterface).update(image: any())
 			}
 		}
-		
+
 		stub(mockUserInterface) { stub in
 			when(stub.update(image: any())).then { image in
-				userInterfaceWasUpdated = (image == testImage)
+                userInterfaceWasUpdated = (image == testImage)
 			}
 		}
 		
@@ -48,7 +49,9 @@ class CuckooExampleTests: XCTestCase {
 		XCTAssertTrue(fetchImageCallWasMade && userInterfaceWasUpdated)
 	}
 
-    func testReset() {
+    func testResetFilter() {
+
+        // Given
         let presenter = Presenter()
         presenter.userInterface = MockUserInterface()
 
@@ -57,6 +60,7 @@ class CuckooExampleTests: XCTestCase {
         var filtersWereReset = false
         var userInterfaceWasUpdated = false
 
+        // When
         stub(mockUserInterface) { stub in
             when(stub.resetFilters()).then {
                 filtersWereReset = true
@@ -71,10 +75,13 @@ class CuckooExampleTests: XCTestCase {
 
         presenter.reset()
 
+        // Then
         XCTAssertTrue(filtersWereReset && userInterfaceWasUpdated)
     }
 
     func testSavePictureSucessfully() {
+
+        // Given
         let presenter = Presenter()
         presenter.broker = MockBroker()
 
@@ -84,6 +91,7 @@ class CuckooExampleTests: XCTestCase {
 
         presenter.filteredImage = UIImage(named: "city1")
 
+        // When
         stub(mockBroker) { stub in
             when(stub.save(image: any(), success: any(), failure: any())).then { _, success, _ in
                 success?()
@@ -93,6 +101,7 @@ class CuckooExampleTests: XCTestCase {
 
         presenter.save()
 
+        // Then
         XCTAssertTrue(saveApiWasCalled)
     }
 }

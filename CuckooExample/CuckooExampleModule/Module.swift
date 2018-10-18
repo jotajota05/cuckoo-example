@@ -9,22 +9,6 @@
 import Foundation
 import UIKit
 
-class Router {
-	
-	public static let shared: Router = Router()
-	
-	private let presenter = Presenter()
-		
-	private init() {}
-	
-	func viewDidLoad(with view: UserInterface) {
-		self.presenter.userInterface = view
-		self.presenter.broker = ImageBroker()
-		self.presenter.imageEditor = ImageEditor()
-		view.eventHandler = self.presenter
-	}
-}
-
 protocol UserInterface: class {
 	var eventHandler: EventHandler? { get set }
 	

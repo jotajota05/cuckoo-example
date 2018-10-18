@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Presenter: EventHandler {
+class Presenter {
 	
 	var userInterface: UserInterface?
 	var broker: Broker?
@@ -17,6 +17,9 @@ class Presenter: EventHandler {
 	
 	var originalImage: UIImage?
 	var filteredImage: UIImage?
+}
+
+extension Presenter: EventHandler {
 	
 	func activate(filter: FilterType) {
 		self.userInterface?.setActive(filter: filter)
@@ -47,6 +50,4 @@ class Presenter: EventHandler {
 		guard let imageToSave = self.filteredImage else { return }
 		self.broker?.save(image: imageToSave, success: nil, failure: nil)
 	}
-	
-	
 }

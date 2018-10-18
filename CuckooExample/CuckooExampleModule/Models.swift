@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum FilterType: Int {
-	case blackAndWhite 	= 0
-	case sepia 			= 1
-	case invert			= 2
+enum FilterType {
+	case blackAndWhite
+	case sepia
+	case invert
 }
